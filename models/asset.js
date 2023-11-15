@@ -5,7 +5,8 @@ const schema = new mongoose.Schema(
     asset_id: {
       type: String,
       index: true,
-      default: () => uuidv4(),
+      unique: true,
+      // default: () => uuidv4(),
     },
     status: {
       type: String,
@@ -15,8 +16,8 @@ const schema = new mongoose.Schema(
     created_by: { type: String },
     public_at: { type: Date, default: null },
     isSpecial: { type: Boolean, default: false },
-    sales_type: { type: String, enum: ["sale", "rent", "both"] },
-    asset_name: { type: String, unique: true },
+    sales_type: { type: String, enum: ["sell", "rent", "rent/sell"] },
+    asset_name: { type: String },
     project_name: { type: String },
     asset_type: { type: String },
     asset_price: { type: Number },
