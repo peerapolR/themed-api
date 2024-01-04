@@ -4,7 +4,7 @@ module.exports = {
   PORT: process.env.PORT || 3001,
   MONGODB_URI: process.env.MONGODB_URI,
   JWT_SECRET: process.env.JWT_SECRET,
-  LINE_AUTH: process.env.LINE_AUTH,
+  LINE_API_TOKEN: process.env.LINE_API_TOKEN,
   s3: {
     endpoint: process.env.S3_endpoint || "",
     accessKeyId: process.env.S3_accessKeyId || "",

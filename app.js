@@ -14,7 +14,8 @@ const config = require("./config/index");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
-const assetsRouter = require("./routes/assets");
+const ordersRouter = require("./routes/orders");
+const couponsRouter = require("./routes/coupons");
 
 const errorHandler = require("./middlewares/errorHandler");
 const passportJWT = require("./middlewares/passportJWT");
@@ -36,7 +37,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/assets", assetsRouter);
+app.use("/orders", ordersRouter);
+app.use("/coupons", couponsRouter);
 
 // Check is login
 // app.use("/bloods", [passportJWT.isLogin], bloodsRouter);
