@@ -16,6 +16,7 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const ordersRouter = require("./routes/orders");
 const couponsRouter = require("./routes/coupons");
+const lineMessagesRouter = require("./routes/lineMessages");
 
 const errorHandler = require("./middlewares/errorHandler");
 const passportJWT = require("./middlewares/passportJWT");
@@ -39,6 +40,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/orders", ordersRouter);
 app.use("/coupons", couponsRouter);
+app.use("/line", lineMessagesRouter);
 
 // Check is login
 // app.use("/bloods", [passportJWT.isLogin], bloodsRouter);

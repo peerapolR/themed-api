@@ -4,6 +4,7 @@ const Order = require("../models/order");
 const User = require("../models/user");
 const config = require("../config/index");
 const responseMessage = require("../utils/responseMessage");
+// const genQRPayment = require("../utils/genQRPayment");
 
 exports.create = async (req, res, next) => {
   try {
@@ -43,3 +44,15 @@ exports.create = async (req, res, next) => {
     next(error);
   }
 };
+
+// exports.qrTest = async (req, res, next) => {
+//   try {
+//     const payment = await genQRPayment();
+//     return res.status(200).json({
+//       ...responseMessage.success,
+//       payment,
+//     });
+//   } catch (err) {
+//     next(err);
+//   }
+// };
