@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon  --watch ./bin/www",
-    "start": "nodemon ./bin/www"
+    "dev": "node  --watch ./bin/www",
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "aws-sdk": "^2.1360.0",
